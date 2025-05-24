@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🦾 Braille Translation Pipeline
 
 ## 📚 Assessment Overview
@@ -100,3 +101,6 @@ See the included demo video for a walkthrough of the pipeline’s functionality!
 ## 👨‍💻 Author
 
 - [Your Name]
+=======
+# Braille-Translator
+>>>>>>> 0bd1523c1bf0f3eb33a2c1380272c14d1d5cc78f
