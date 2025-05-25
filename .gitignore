@@ -1,4 +1,5 @@
-.venv/
+data/output/
 __pycache__/
 *.pyc
-data/output/
+*.pyo
+*.DS_Store
