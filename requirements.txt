@@ -2,5 +2,4 @@ pytesseract
 Pillow
 beautifulsoup4
 requests
-pyliblouis
 lxml
