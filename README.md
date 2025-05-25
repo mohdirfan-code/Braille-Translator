@@ -27,11 +27,8 @@ braille-etl-pipeline/
 │   └── structure_to_json.py    # Converts structured output to JSON
 │
 ├── requirements.txt   # Python dependencies for the project
-├── README.md          # This documentation file
-└── demo_script.md     # Script for creating a demo video or walkthrough
+└── README.md          # This documentation file
 ```
-
----
 
 ## 🚀 Key Features
 
@@ -96,14 +93,6 @@ All outputs will appear in the `data/output/` or as a JSON file in `data/`.
 2. Run each script in order, or chain them as needed.
 3. View the translated Braille output in `data/output/`.
 4. Check the structured JSON output in `data/`.
-
----
-
-## 📊 Demo Video
-
-A demo video showing the pipeline in action is included!  
-See `demo_script.md` for a suggested narration or steps to create your own walkthrough.  
-🎥 **[Include demo.mp4 here or a cloud link]**
 
 ---
 
