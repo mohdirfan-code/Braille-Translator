@@ -118,19 +118,11 @@ See `demo_script.md` for a suggested narration or steps to create your own walkt
 
 ## 📝 Authors
 
-- [Your Name] (@mohdirfan-code)
+- Mohd Irfan (@mohdirfan-code)
 
 ---
 
-## 🙌 Acknowledgements
-
-- Unicode Braille patterns
-- Python open-source community
-- [Add any other libraries, datasets, or inspirations here]
-
----
-
-## 📝 Notes
+## 📝 Note 
 
 - Make sure to activate your virtual environment before running scripts.
 - If you add new scripts or data types, update this README for future users.
