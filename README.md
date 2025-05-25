@@ -1,106 +1,141 @@
-<<<<<<< HEAD
-# 🦾 Braille Translation Pipeline
+# 🦾 Braille ETL Pipeline
 
-## 📚 Assessment Overview
+## 📚 Project Overview
 
-This project was developed as part of an assessment to create an automated pipeline that converts processed text into Grade 1 English Unicode Braille. The goal was to design a simple, robust, and efficient solution that can handle batches of text files, making them accessible for visually impaired users.
-
----
-
-## 🔄 What We Did
-
-- **Automated Pipeline:** Reads cleaned text files from a specified directory and outputs corresponding Braille translations.
-- **Grade 1 English Braille:** Uses a Unicode mapping for Grade 1 English Braille, ensuring accurate and readable Braille output.
-- **Batch Processing:** Handles multiple files in one run, writing outputs to a separate directory for easy access.
-- **Language Detection:** Automatically checks for language, but only supports English for Braille output.
-- **Clear Output:** Each output file contains both the original text and the Braille translation for reference.
+Welcome to the **Braille ETL Pipeline**!  
+This project is an end-to-end, modular, and automated pipeline for converting raw text samples into **Grade 1 English Unicode Braille**, making content accessible for visually impaired users.  
+It follows a classic **Extract, Transform, Load (ETL)** approach and is designed for clarity, reproducibility, and easy extension.
 
 ---
 
-## 🔧 How It Works
-
-1. **Input:** Place your cleaned text files (ending with `_cleaned.txt`) in the `data/processed/cleaned/` directory.
-2. **Processing:** Run the pipeline script. Each file is read, processed, and translated into Braille.
-3. **Output:** The results are saved as new files in the `data/output/` directory, with `_braille.txt` appended to the name.
-
----
-
-## 🚀 Usage
-
-1. **Clone the repository:**
-   ```sh
-   git clone [Your GitHub Repo URL]
-   cd [repo-folder]
-   ```
-
-2. **Set up your directories:**
-   - Place input files in `data/processed/cleaned/`.
-   - Ensure the `data/output/` directory exists (the script will create it if not).
-
-3. **Run the script:**
-   ```sh
-   python pipeline_script.py
-   ```
-
-4. **Check your results:**
-   - Translated files will appear in `data/output/`, with both the original text and the Braille translation.
-
----
-
-## 💻 Example
-
-Suppose you have a file `sample_cleaned.txt` containing:
-```
-Hello world!
-```
-
-The output in `data/output/sample_braille.txt` will be:
-```
-TEXT: Hello world!
-BRAILLE: ⠓⠑⠇⠇⠕ ⠺⠕⠗⠇⠙⠖
-```
-
----
-
-## 🌟 Features
-
-- Fast and easy-to-use
-- Unicode Braille output (Grade 1 English)
-- No external dependencies—fully portable Python solution
-- Clear directory structure for reproducibility
-
----
-
-## 🗃️ Directory Structure
+## 🗂️ Folder Structure
 
 ```
-repo/
+braille-etl-pipeline/
+│
 ├── data/
-│   ├── processed/
-│   │   └── cleaned/
-│   └── output/
-├── pipeline_script.py
-└── README.md
+│   ├── raw/              # Original data samples (input)
+│   ├── processed/        # Cleaned and segmented text files
+│   ├── output/           # Final Braille translations (output)
+│   └── *.json            # Structured data as JSON (output from pipeline)
+│
+├── scripts/
+│   ├── collect_samples.py      # For gathering or simulating input data
+│   ├── extract_text.py         # Extracts text from raw files (e.g., PDFs, images)
+│   ├── clean_and_segment.py    # Cleans and segments text into paragraphs/lines
+│   ├── braille_translate.py    # Translates cleaned text to Grade 1 Braille (Unicode)
+│   └── structure_to_json.py    # Converts structured output to JSON
+│
+├── requirements.txt   # Python dependencies for the project
+├── README.md          # This documentation file
+└── demo_script.md     # Script for creating a demo video or walkthrough
 ```
 
 ---
 
-## 🏁 Assessment Outcome
+## 🚀 Key Features
 
-- The pipeline fulfills the requirements for batch Braille translation from processed text.
-- The solution is easy to extend, maintain, and integrate into larger accessibility workflows.
+- **Modular ETL Pipeline**: Each stage (collection, extraction, cleaning, translation, structuring) is a standalone script.
+- **Batch Processing**: Handles multiple files/folders in one run.
+- **Grade 1 English Braille**: Unicode mapping ensures output is both machine- and human-readable.
+- **JSON Output**: For easy integration with other systems or analytics.
+- **Clear Directory Separation**: Input, intermediate, and output data are kept organized for traceability.
+- **Virtual Environment Support**: All dependencies isolated for reproducible results.
+- **Demo Script Provided**: Easy guide for showcasing the pipeline in action.
 
 ---
 
-## 📹 Demo Video
+## 🛠️ Setup & Usage
 
-See the included demo video for a walkthrough of the pipeline’s functionality!
+### 1. **Clone the Repository**
+```sh
+git clone https://github.com/mohdirfan-code/Braille-Translator.git
+cd braille-etl-pipeline
+```
+
+### 2. **Create and Activate a Virtual Environment**
+```sh
+python -m venv .venv
+# On Windows:
+.venv\Scripts\activate
+# On Mac/Linux:
+source .venv/bin/activate
+```
+
+### 3. **Install Dependencies**
+```sh
+pip install -r requirements.txt
+```
+
+### 4. **Run the Pipeline Scripts**
+- **Step 1:** Collect or place your raw data in `data/raw/`.
+- **Step 2:** Extract text:
+  ```sh
+  python scripts/extract_text.py
+  ```
+- **Step 3:** Clean and segment text:
+  ```sh
+  python scripts/clean_and_segment.py
+  ```
+- **Step 4:** Translate to Braille:
+  ```sh
+  python scripts/braille_translate.py
+  ```
+- **Step 5:** Structure output as JSON:
+  ```sh
+  python scripts/structure_to_json.py
+  ```
+
+All outputs will appear in the `data/output/` or as a JSON file in `data/`.
 
 ---
 
-## 👨‍💻 Author
+## 💻 Workflow
 
-- [Your Name]
-=======
-# Braille-Translator
->>>>>>> 0bd1523c1bf0f3eb33a2c1380272c14d1d5cc78f
+1. Place your sample files (e.g., `.txt`, `.pdf`,`.jpg`) in `data/raw/`.
+2. Run each script in order, or chain them as needed.
+3. View the translated Braille output in `data/output/`.
+4. Check the structured JSON output in `data/`.
+
+---
+
+## 📊 Demo Video
+
+A demo video showing the pipeline in action is included!  
+See `demo_script.md` for a suggested narration or steps to create your own walkthrough.  
+🎥 **[Include demo.mp4 here or a cloud link]**
+
+---
+
+## 🌟 Why Use This Pipeline?
+
+- **Accessibility First:** Designed to make content accessible to all.
+- **Reproducible Research:** Modular scripts and environments make it easy to retrace steps.
+- **Open Source & Extendable:** Add more languages, input formats, or output types with minimal changes.
+- **Educational Value:** Great for learning about ETL, accessibility, and text processing.
+
+---
+
+## 📝 Authors
+
+- [Your Name] (@mohdirfan-code)
+
+---
+
+## 🙌 Acknowledgements
+
+- Unicode Braille patterns
+- Python open-source community
+- [Add any other libraries, datasets, or inspirations here]
+
+---
+
+## 📝 Notes
+
+- Make sure to activate your virtual environment before running scripts.
+- If you add new scripts or data types, update this README for future users.
+- For large files, consider using [Git LFS](https://git-lfs.github.com/).
+
+---
+
+**Happy Translating! 🦾⠓⠑⠇⠇⠕ ⠺⠕⠗⠇⠙!**
