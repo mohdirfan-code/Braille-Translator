@@ -108,6 +108,7 @@ All outputs will appear in the `data/output/` or as a JSON file in `data/`.
 ## 📊 Working Demo Video 
 
 A demo video showing the pipeline in action ! 
+
 [Watch the demo video here](https://drive.google.com/file/d/1LC9uHloRUpQWZuIDCH5PreOn5wgmi6-T/view?usp=sharing)
 
 ---
