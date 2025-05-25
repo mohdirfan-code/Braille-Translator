@@ -50,7 +50,7 @@ braille-etl-pipeline/
 ### 1. **Clone the Repository**
 ```sh
 git clone https://github.com/mohdirfan-code/Braille-Translator.git
-cd braille-etl-pipeline
+cd Braille-Translator-main
 ```
 
 ### 2. **Create and Activate a Virtual Environment**
