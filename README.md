@@ -27,11 +27,8 @@ braille-etl-pipeline/
 │   └── structure_to_json.py    # Converts structured output to JSON
 │
 ├── requirements.txt   # Python dependencies for the project
-├── README.md          # This documentation file
-└── demo_script.md     # Script for creating a demo video or walkthrough
+└── README.md          # This documentation file
 ```
-
----
 
 ## 🚀 Key Features
 
@@ -99,20 +96,20 @@ All outputs will appear in the `data/output/` or as a JSON file in `data/`.
 
 ---
 
-## 📊 Demo Video
-
-A demo video showing the pipeline in action is included!  
-See `demo_script.md` for a suggested narration or steps to create your own walkthrough.  
-🎥 **[Include demo.mp4 here or a cloud link]**
-
----
-
 ## 🌟 Why Use This Pipeline?
 
 - **Accessibility First:** Designed to make content accessible to all.
 - **Reproducible Research:** Modular scripts and environments make it easy to retrace steps.
 - **Open Source & Extendable:** Add more languages, input formats, or output types with minimal changes.
 - **Educational Value:** Great for learning about ETL, accessibility, and text processing.
+
+---
+
+## 📊 Working Demo Video 
+
+A demo video showing the pipeline in action ! 
+
+[Watch the demo video here](https://drive.google.com/file/d/1LC9uHloRUpQWZuIDCH5PreOn5wgmi6-T/view?usp=sharing)
 
 ---
 
